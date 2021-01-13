@@ -14,7 +14,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'qpkorr/vim-bufkill'
 
 call plug#end()
 
@@ -34,6 +33,4 @@ colorscheme onedark
 nnoremap <C-p> :FZF <CR>
 nnoremap <C-h> :bp <CR>
 nnoremap <C-l> :bn <CR>
-nnoremap <C-w> :BD <CR>
-
-
+nnoremap <C-w> :bp\|bd # <CR>
