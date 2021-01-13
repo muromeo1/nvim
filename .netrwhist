@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/murilo/apps/QultureApp'
+let g:netrw_dirhist_7='/home/murilo'
+let g:netrw_dirhist_6='/home/murilo/apps'
+let g:netrw_dirhist_5='/home/murilo/apps/QultureApp'
+let g:netrw_dirhist_4='/home/murilo/apps/QultureApp/app'
+let g:netrw_dirhist_3='/home/murilo/apps/QultureApp/app/interactors'
+let g:netrw_dirhist_2='/home/murilo/apps/QultureApp/app'
+let g:netrw_dirhist_1='/home/murilo/apps/QultureApp'
