@@ -4,7 +4,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set encoding=UTF-8
-set guifont=AnonymousPro
+set guifont=Mononoki
 
 call plug#begin()
 
@@ -14,6 +14,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-ruby/vim-ruby'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-endwise'
 
 call plug#end()
 
@@ -21,16 +26,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled=1
 let g:airline_theme='luna'
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let ruby_space_errors = 1
+let ruby_operators = 1
 
 colorscheme onedark
 
 nnoremap <C-p> :FZF <CR>
 nnoremap <C-h> :bp <CR>
 nnoremap <C-l> :bn <CR>
-nnoremap <C-w> :bp\|bd # <CR>
+nnoremap <C-S-w> :bp\|bd # <CR>
+nnoremap <C-\> :NERDTreeToggle <CR>
+
+autocmd BufWritePre * %s/\s\+$//e
