@@ -19,6 +19,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-ruby/vim-ruby'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-endwise'
+Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -32,6 +34,7 @@ let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 let ruby_space_errors = 1
 let ruby_operators = 1
+let g:user_emmet_leader_key=','
 
 colorscheme onedark
 
