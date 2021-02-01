@@ -56,5 +56,6 @@ nnoremap <C-h> :bp <CR>
 nnoremap <C-l> :bn <CR>
 nnoremap <C-S-w> :bp\|bd # <CR>
 nnoremap <C-\> :NERDTreeToggle <CR>
+nnoremap <C-s> :w <CR>
 
 autocmd BufWritePre * %s/\s\+$//e
