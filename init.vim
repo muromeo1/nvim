@@ -5,7 +5,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set encoding=UTF-8
-set guifont=Mononoki
 
 call plug#begin()
 
@@ -21,6 +20,8 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-endwise'
 Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
+Plug 'kqito/vim-easy-replace'
+Plug 'dyng/ctrlsf.vim'
 
 call plug#end()
 
@@ -54,8 +55,17 @@ endif
 nnoremap <C-p> :FZF <CR>
 nnoremap <C-h> :bp <CR>
 nnoremap <C-l> :bn <CR>
-nnoremap <C-S-w> :bp\|bd # <CR>
+nnoremap <C-w> :bp\|bd # <CR>
 nnoremap <C-\> :NERDTreeToggle <CR>
 nnoremap <C-s> :w <CR>
+
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 autocmd BufWritePre * %s/\s\+$//e
