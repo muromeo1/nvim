@@ -1,5 +1,3 @@
 {
-  "codeLens.enable": true,
-  "solargraph.useBundler": true,
-  "solargraph.checkGemVersion": false
+  "codeLens.enable": true
 }
